@@ -1,0 +1,19 @@
+/* Reset body margin */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar Styling (Optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
