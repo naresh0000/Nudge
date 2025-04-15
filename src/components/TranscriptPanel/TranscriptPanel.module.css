@@ -1,0 +1,13 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list {
+  margin-top: 12px;
+  list-style-type: disc;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
