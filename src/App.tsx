@@ -1,21 +1,8 @@
-import Sidebar from "./components/Sidebar/Sidebar";
-import ChatWindow from "./components/ChatWindow/ChatWindow";
-import HistoryPanel from "./components/HistoryPanel/HistoryPanel";
+// src/App.tsx
+import Home from './pages/Home';
 
-const App = () => {
-  return (
-    <div className="flex flex-row h-screen w-screen">
-
-      {/* Sidebar */}
-      <Sidebar />
-
-      {/* Chat Window */}
-      <ChatWindow />
-
-      {/* History */}
-      <HistoryPanel />
-    </div>
-  );
-};
+function App() {
+  return <Home />;
+}
 
 export default App;
