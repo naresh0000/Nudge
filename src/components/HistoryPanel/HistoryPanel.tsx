@@ -1,20 +1,23 @@
+import React from 'react';
 import styles from './HistoryPanel.module.css';
+import { HistoryPanelProps } from '../../types/types';
 
-const history = [
-  "Tell me about yourself",
-  "What are your strengths?",
-  "Explain a challenging project you worked on",
-];
-
-export default function HistoryPanel() {
+const HistoryPanel: React.FC<HistoryPanelProps> = ({ history, isRecording, onStart, onSend }) => {
   return (
     <div className={styles.panel}>
-      <h2>History Panel</h2>
       <ul className={styles.list}>
-        {history.map((question, idx) => (
-          <li key={idx}>{question}</li>
+        {[...history].reverse().map((q, i) => (
+          <li key={i}>{q}</li>
         ))}
       </ul>
+      <div className={styles.controls}>
+        <button onClick={onStart}>
+          🎤 {isRecording ? 'Stop' : 'Start'}
+        </button>
+        <button onClick={onSend}>🚀 Send</button>
+      </div>
     </div>
   );
-}
+};
+
+export default HistoryPanel;
