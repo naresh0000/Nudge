@@ -1,12 +1,50 @@
 .panel {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align content at the top */
+  align-items: stretch; /* Stretch children to fill the width */
+  height: 90%; /* Full height */
+  padding: 16px;
+  box-sizing: border-box; /* Include padding in height calculations */
+  background-color: #fff; /* Light background for the panel */
+  border: 1px solid #ddd; /* Border similar to TranscriptPanel */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .list {
-  list-style-type: square;
-  padding-left: 16px;
+  flex: 1; /* Allow the list to take up available space */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  padding-left: 0;
+}
+
+.list li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #f1f1f1; /* Light gray background for list items */
+  border-radius: 4px; /* Rounded corners for list items */
   font-size: 14px;
-  line-height: 1.6;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 8px; /* Add spacing between buttons */
+  margin-top: auto; /* Push the controls to the bottom */
+}
+
+.controls button {
+  color: white;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: var(--nudge-primary);
+}
+
+.controls button:hover {
+  background: var(--nudge-primary-dark);
 }

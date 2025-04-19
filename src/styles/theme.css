@@ -1,0 +1,25 @@
+:root {
+  --nudge-primary: #1a237e;
+  --nudge-primary-dark: #1C1F4A;
+  --nudge-bg-light: #f9fafb;
+  --nudge-text: #111827;
+}
+
+/* Add this to your global styles or a relevant CSS file */
+.top-bar {
+  position: fixed; /* Fix the top bar at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 60px; /* Adjust height as needed */
+  background-color: var(--nudge-primary); /* Use your theme's primary color */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.content {
+  margin-top: 60px; /* Add margin equal to the height of the top bar */
+  padding: 16px; /* Optional: Add padding for spacing */
+  background-color: var(--nudge-bg-light); /* Use your theme's background color */
+  height: calc(100vh - 60px); /* Ensure the content fills the remaining space */
+  overflow-y: auto; /* Enable scrolling for the content */
+}

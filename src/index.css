@@ -1,6 +1,9 @@
-/* index.css */
+
+@import './styles/theme.css';
+
 body {
-    margin: 0;
-    font-family: sans-serif;
-  }
-  
+  background-color: var(--nudge-bg-light);
+  color: var(--nudge-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}

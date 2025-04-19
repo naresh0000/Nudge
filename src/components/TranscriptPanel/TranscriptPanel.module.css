@@ -1,13 +1,32 @@
-.panel {
+.wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: center; /* Center the text vertically */
+  align-items: stretch; /* Stretch the textarea to fill the wrapper */
+  height: 90%; /* Full height for the wrapper */
+  padding: 16px; /* Add padding around the wrapper */
+  background-color: white; /* Light background for the wrapper */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-sizing: border-box; /* Include padding in height calculations */
 }
 
-.list {
-  margin-top: 12px;
-  list-style-type: disc;
-  padding-left: 16px;
-  font-size: 14px;
-  line-height: 1.5;
+.textarea {
+  flex: 1; /* Allow the textarea to grow and fill the wrapper */
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding inside the textarea */
+  font-size: 14px; /* Font size for the text */
+  border: none; /* Remove default border */
+  outline: none; /* Remove focus outline */
+  resize: none; /* Disable resizing */
+  background-color: transparent; /* Match the wrapper's background */
+  color: #333; /* Text color */
+  font-family: 'Segoe UI', sans-serif; /* Consistent font */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.textarea:focus {
+  border-color: var(--nudge-primary-dark);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
 }
